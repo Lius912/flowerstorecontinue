@@ -1,8 +1,5 @@
 package apps.flowerstore.payment;
 
-import java.util.List;
-
-import apps.flowerstore.flower.Item;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
@@ -11,6 +8,6 @@ public class PayPalPaymentStrategy implements Payment {
     private String description;
     @Override
     public void pay(double price) {
-        return;
+        System.out.println("paying using PayPal");
     }
 }

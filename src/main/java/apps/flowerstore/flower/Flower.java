@@ -1,8 +1,5 @@
 package apps.flowerstore.flower;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -11,11 +8,7 @@ import lombok.Setter;
 
 
 @Setter @Getter @AllArgsConstructor @NoArgsConstructor
-@Table
-@Entity
 public class Flower extends Item{
-    @Id
-    private long id;
     private double sepalLength;
     private FlowerColor color;
     private double price;
@@ -30,5 +23,9 @@ public class Flower extends Item{
 
     public String getColor() {
         return color.toString();
+    }
+
+    public double price() {
+        return getPrice();
     }
 }

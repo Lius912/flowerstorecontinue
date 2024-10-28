@@ -3,9 +3,14 @@ package apps.flowerstore.delivery;
 import java.util.List;
 
 import apps.flowerstore.flower.Item;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 
+@AllArgsConstructor @Getter
 public class DHLDeliveryStrategy implements Delivery {
+    private String description;
+    @Override
     public void deliver(List<Item> items) {
-        return;
+        System.out.println("delivering items using DHL");
     }
 }
